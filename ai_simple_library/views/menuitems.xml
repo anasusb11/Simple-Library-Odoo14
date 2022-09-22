@@ -6,7 +6,12 @@
     <menuitem id="info_menu" name="Information" parent="libary_menu" sequence="10"/>
 
     <menuitem id="buku_menu" name="Buku" action="buku_action" parent="info_menu" sequence="5"/>
-    <menuitem id="anggota_menu" name="Anggota" action="anggota_action" parent="info_menu" sequence="10"/>
+    <menuitem id="anggota_menu" name="Anggota" action="account.res_partner_action_customer" parent="info_menu" sequence="10"/>
 
+    <menuitem id="menu_perpustakaan_pinjam" name="Pinjaman" parent="libary_menu"/>
+
+    <menuitem id="submenu_books_tersedia" name="Buku Tersedia" parent="menu_perpustakaan_pinjam" action="buku_tersedia_action"/>
+
+    <menuitem id="submenu_books_tersewa" name="Buku Tersewa" parent="menu_perpustakaan_pinjam" action="buku_tersewa_action"/>
 
 </odoo>
