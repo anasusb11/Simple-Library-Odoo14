@@ -41,3 +41,4 @@ class ResPartner(models.Model):
     # def _get_lang(self):
     #     return self.env['res.lang'].get.installed()
     
+    

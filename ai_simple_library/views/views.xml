@@ -242,5 +242,9 @@
       <field name="act_window_id" ref="buku_tersewa_action"/>
       <field name="view_id" ref="buku_form_view"/>
     </record>
+
+
+    
+
   </data>
 </odoo>

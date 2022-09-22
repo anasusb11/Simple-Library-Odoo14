@@ -27,10 +27,7 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-        # 'views/anggota.xml',
-        'views/menuitems.xml',
-        # 'views/buku_tersedia',
-        # 'views/buku_tersewa'
+        'views/menuitems.xml'
         
     ],
     'application': True, 
