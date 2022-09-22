@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="libary_menu" name="Libary" sequence="10"/>
+
+    <menuitem id="info_menu" name="Information" parent="libary_menu" sequence="10"/>
+
+    <menuitem id="buku_menu" name="Buku" action="buku_action" parent="info_menu" sequence="5"/>
+    <menuitem id="anggota_menu" name="Anggota" action="anggota_action" parent="info_menu" sequence="10"/>
+
+
+</odoo>

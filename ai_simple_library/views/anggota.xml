@@ -38,14 +38,6 @@
         </field>
     </record>
 
-    <record id="action_anggota" model="ir.actions.act_window.view">
-        <field name="sequence" eval="1"/>
-        <field name="view_mode">form</field>
-        <field name="act_window_id" ref="anggota_action"/>
-        <field name="view_id" ref="anggota_view_form"/>
-    </record>
-
-
     <record id="anggota_action" model="ir.actions.act_window">
         <field name="name">Anggota</field>
         <field name="res_model">res.partner</field>
@@ -59,10 +51,19 @@
         </field>
     </record>
 
-    <menuitem id="libary_menu" name="Libary" sequence="10"/>
+    <record id="action_anggota_tree" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">tree</field>
+        <field name="act_window_id" ref="anggota_action"/>
+        <field name="view_id" ref="anggota_view_tree"/>
+    </record>
 
-    <menuitem id="info_menu" name="Information" parent="libary_menu" sequence="10"/>
+    <record id="action_anggota" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">form</field>
+        <field name="act_window_id" ref="anggota_action"/>
+        <field name="view_id" ref="anggota_view_form"/>
+    </record>
 
-    <menuitem id="anggota_menu" name="Anggota" action="anggota_action" parent="info_menu" sequence="10"/>
 
 </odoo>
