@@ -19,7 +19,7 @@
         <field name="arch" type="xml">
             <form string="Kartu Perpustakaan">
                 <header>
-                    <button name="kartu_confirm" type="object" states="draft" string="Confirm" class="oe_highlight" groups="aa_library.group_petugas_perpus"/>
+                    <button name="kartu_confirm" type="object" states="draft" string="Confirm" class="oe_highlight" groups="ai_simple_library.group_petugas_perpus" />
                     <field name="state" widget="statusbar" statusbar_visible="draft,confirm"/>
                 </header>
                 <sheet>

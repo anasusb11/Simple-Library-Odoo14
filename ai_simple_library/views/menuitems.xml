@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <menuitem id="libary_menu" name="Libary" sequence="10"/>
+    <menuitem id="libary_menu" name="Libary" sequence="10" web_icon="ai_simple_library,static/description/icon.png"/>
 
     <menuitem id="info_menu" name="Information" parent="libary_menu" sequence="10"/>
 
