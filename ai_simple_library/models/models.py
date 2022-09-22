@@ -1,18 +1,24 @@
-# -*- coding: utf-8 -*-
-
-# from odoo import models, fields, api
+from odoo import models, fields, api
 
 
-# class ai_simple_library(models.Model):
-#     _name = 'ai_simple_library.ai_simple_library'
-#     _description = 'ai_simple_library.ai_simple_library'
-
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         for record in self:
-#             record.value2 = float(record.value) / 100
+class ResPartner(models.Model):
+    _inherit = 'res.partner'
+    
+    
+    penulis = fields.Boolean(string= 'Penulis ?')
+    anggota = fields.Boolean(string='Anggota ?')
+    penerbit = fields.Boolean(string= 'Penerbit ?')
+    
+    born_date = fields.Date(string='Date Of Birth')
+    death_date = fields.Date(string='Date Of Death')
+    
+    biography = fields.Text(string='Biography')
+    # lang = fields.Selection(string='Language', selection='_get_lang')
+    
+    
+    _sql_constraints = [('name_uniq', 'unique(name)', 'Namanya Harus Unik!')]
+    
+    # @api.model
+    # def _get_lang(self):
+    #     return self.env['res.lang'].get.installed()
+    

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="buku_sedia_action" model="ir.actions.act_window">
+        <field name="name">Buku Tersedia</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.product</field>
+        <field name="view_mode">kanban,tree</field>
+        <field name="view_type">form</field>
+        <field name="domain">[('state', '=', 'available')]</field>
+        <field name="view_id" ref="buku_kanban_view"/>
+    </record>
+     
+     
+    <record id="action_kanban_view_buku_tersedia" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="buku_kanban_view"/>
+        <field name="act_window_id" ref="buku_sedia_action"/>
+    </record>
+     
+    <record id="action_tree_view_buku_tersedia" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="buku_tree_view"/>
+        <field name="act_window_id" ref="buku_sedia_action"/>
+    </record>
+     
+     
+    <menuitem id="menu_perpustakaan_pinjam" name="Pinjaman" parent="menubar_perpustakaan"/>
+     
+    <menuitem id="submenu_books_tersedia" name="Buku Tersedia" parent="menu_perpustakaan_pinjam" action="buku_sedia_action"/>
+
+</odoo>
