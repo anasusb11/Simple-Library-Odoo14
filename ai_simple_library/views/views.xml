@@ -26,6 +26,8 @@
       <field name="arch" type="xml">
         <form string="Buku">
           <header>
+            <button string="Rent" name="action_rent" type="object" states="available" class="oe_highlight"/>
+            <button string="Available" name="action_available" states="rent" type="object" class="oe_highlight"/>
             <field name="state" widget="statusbar" statusbar_colors='{"draft":"red","approve":"blue"}'/>
           </header>
 

@@ -15,6 +15,12 @@ class ProductProduct(models.Model):
     resensi = fields.Text('Resensi')
     state = fields.Selection([('available', 'Available'), ('rent', 'Rented')], 'State', readonly=True, default='available')
 
+    def action_rent(self):
+        self.write ({'state' : 'rent'})
+
+    def action_available(self):
+        self.write ({'state' : 'available'})
+
 class ResPartner(models.Model):
     _inherit = 'res.partner'
     
