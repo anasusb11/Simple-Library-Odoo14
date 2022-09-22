@@ -6,7 +6,7 @@ class KartuPerpustakaan(models.Model):
     _name = 'kartu.perpustakaan'
  
     name = fields.Char('Reference', readonly=True, default='/')
-    partner_id = fields.Many2one('res.partner', 'Member', required=True, domain=[('anggota', '=', True)], readonly=True, states={'draft': [('readonly', False)]})
+    partner_id = fields.Many2one('res.partner', 'Member', required=True, readonly=True, states={'draft': [('readonly', False)]})
     kartu_lines = fields.One2many('kartu.perpustakaan.line', 'kartu_id', 'Kartu Perpustakaan Line', readonly=True, states={'confirm': [('readonly', False)]})
     state = fields.Selection([('draft', 'Draft'), ('confirm', 'Confirm')], "State", default='draft', readonly=True)
     note = fields.Text('Notes')

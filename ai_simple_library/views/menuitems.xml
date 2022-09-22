@@ -8,10 +8,18 @@
     <menuitem id="buku_menu" name="Buku" action="buku_action" parent="info_menu" sequence="5"/>
     <menuitem id="anggota_menu" name="Anggota" action="account.res_partner_action_customer" parent="info_menu" sequence="10"/>
 
+    <!-- pinjaman -->
     <menuitem id="menu_perpustakaan_pinjam" name="Pinjaman" parent="libary_menu"/>
-
     <menuitem id="submenu_books_tersedia" name="Buku Tersedia" parent="menu_perpustakaan_pinjam" action="buku_tersedia_action"/>
-
     <menuitem id="submenu_books_tersewa" name="Buku Tersewa" parent="menu_perpustakaan_pinjam" action="buku_tersewa_action"/>
+    <menuitem id="submenu_books_kartu" name="Kartu Perpustakaan" parent="menu_perpustakaan_pinjam" action="kartu_perpustakaan_action"/>
+    <menuitem id="submenu_books_daftar_pinjaman" name="Daftar Pinjaman" parent="menu_perpustakaan_pinjam" action="daftar_pinjaman_action"/>
+
+    <!-- Konfigurasi -->
+    <menuitem id="menu_perpustakaan_config" name="Konfigurasi" parent="libary_menu"/>
+    <menuitem id="submenu_config" name="Rak" parent="menu_perpustakaan_config" action="buku_lokasi_action"/>
+    <menuitem id="submenu_penulis" name="Penulis" parent="menu_perpustakaan_config" action="penulis_action"/>
+    <menuitem id="submenu_penerbit" name="Penerbit" parent="menu_perpustakaan_config" action="penerbit_action"/>
+    <menuitem id="submenu_kategori" name="Kategori" parent="menu_perpustakaan_config" action="buku_kategori_action"/>
 
 </odoo>
